@@ -1,0 +1,26 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t= sc.nextInt();
+		while(t-->0){
+		    int sal = sc.nextInt();
+		    if(sal<1500){
+		        double totalsal =0.1 * sal + 0.9 * sal+ sal ;
+		        System.out.println(totalsal);
+		    }
+		    else{
+		        int hra = 500;
+		        double totalsal = sal+ hra + 0.98 *sal;
+		        System.out.println(totalsal);
+		    }
+		}
+	}
+}
