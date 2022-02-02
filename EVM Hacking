@@ -1,0 +1,38 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int a = sc.nextInt();
+		    int b = sc.nextInt();
+		    int c = sc.nextInt();
+		    int p = sc.nextInt();
+		    int q = sc.nextInt();
+		    int r = sc.nextInt();
+		    int vote = a+b+c;
+		    int total = (p+q+r)/2;
+		    if((vote+p-a)>total){
+		        System.out.println("yes");
+		    }
+		    else if((vote+q-b)>total){
+		        System.out.println("yes");
+		    }
+		    else if ((vote+r-c)>total){
+		        System.out.println("yes");
+		    }
+		    else{
+		        System.out.println("no");
+		    }
+		}
+	}
+}
