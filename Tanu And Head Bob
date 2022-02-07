@@ -1,0 +1,41 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t =sc.nextInt();
+		while(t-->0){
+		    int n =sc.nextInt();
+		    sc.nextLine();
+		    String s=sc.next();
+		    
+		    int ind=0,nonind=0,not=0;
+		    for(int i=0;i<n;i++){
+		        if(s.charAt(i)=='I'){
+		            ind++;
+		        }
+		        else if(s.charAt(i)=='Y'){
+		            nonind++;
+		        }
+		        else{
+		            not++;
+		        }
+		    }
+		    if(ind>nonind){
+		        System.out.println("INDIAN");
+		    }
+		    else if(nonind>ind){
+		        System.out.println("NOT INDIAN");
+		    }
+		    else{
+		        System.out.println("NOT SURE");
+		    }
+		}
+	}
+}
