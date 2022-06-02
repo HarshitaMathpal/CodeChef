@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t=sc.nextInt();
+		while(t-->0){
+		    int pa=sc.nextInt();
+		    int pb=sc.nextInt();
+		    int qa=sc.nextInt();
+		    int qb=sc.nextInt();
+		    int t1=Math.max(pa,pb);
+		    int t2=Math.max(qa,qb);
+		    if(t1>t2){
+		        System.out.println("Q");
+		    }
+		    else if(t1<t2){
+		        System.out.println("P");
+		    }
+		    else{
+		        System.out.println("TIE");
+		    }
+		}
+	}
+}
