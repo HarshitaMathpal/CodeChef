@@ -1,0 +1,36 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner scans = new Scanner(System.in);
+		int testtt=scans.nextInt();
+		while(testtt-->0){
+		    int n=scans.nextInt();
+		    int[] maxi=new int[n];
+		    for(int i=0;i<n;i++){
+		        maxi[i]=scans.nextInt();
+		    }
+	//	    int minus=0;
+		    if(n%2!=0){
+		        System.out.println(-1);
+		    }
+		    else{
+		        int one=0;
+		        int zero=0;
+		        for(int i=0;i<n;i++){
+		            if(maxi[i]==1)
+		            one++;
+		            else
+		            zero++;
+		        }
+		        System.out.println(Math.abs(one-zero)/2);
+		    }
+		}
+	}
+}
