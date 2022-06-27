@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner scan = new Scanner(System.in);
+		int testcase = scan.nextInt();
+		while(testcase-->0){
+		    int n=scan.nextInt();
+		    int sum=scan.nextInt();
+		    int[] arr = new int[n];
+		    for(int i=0;i<n;i++){
+		        arr[i]=scan.nextInt();
+		    }
+		    boolean flag =helper(arr,n,sum);
+		    
+		    if(flag)
+		    System.out.println("Yes");
+		    else
+		    System.out.println("No");
+		}
+	}
+	
+	private static boolean helper(int[] arr,int n,int sum){
+	    for(int i=0;i<n-1;i++){
+	        if(arr[i]>arr[i+1]){
+	            if(arr[i]+arr[i+1]>sum){
+	                return false;
+	            }
+	            else{
+	                int temp=arr[i];
+	                arr[i]=arr[i+1];
+	                arr[i+1]=temp;
+	            }
+	        }
+	    }
+	    return true;
+	} 	    
+
+}
