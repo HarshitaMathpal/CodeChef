@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner Scan = new Scanner(System.in);
+		int testcase = Scan.nextInt();
+		while(testcase-->0){
+		    int normal = Scan.nextInt();
+		    int prem = Scan.nextInt();
+		    int num = Scan.nextInt();
+		    int rupee = Scan.nextInt();
+		    int prebur=0;
+		    if(normal > rupee || (rupee/normal)<num){
+		        System.out.println(-1);
+		    }
+		    else if((rupee/prem)>=num)
+		    System.out.println(0+" "+num);
+		    else{
+		        prebur = (rupee-(num*normal))/(prem-normal);
+		        prebur = Math.min(num,prebur);
+		        int normalbur = num - prebur;
+                System.out.println(normalbur+" "+prebur);
+		    }
+		}
+		
+	}
+}
